@@ -23,3 +23,9 @@ Kişiyi değil değişikliği değerlendirin. Sorunu, nedenini ve mümkünse bir
 - Başka bir ekip üyesi inceledi ve önemli yorumlar çözüldü.
 
 Henüz uygulama veya test altyapısı yok; çalıştırılmamış testleri geçmiş gibi göstermeyin. Teknoloji yığını seçilince kurulum, test ve CI komutları eklenecek.
+
+## Fikir PDF'leri ve güvenlik etkisi
+
+Fikir PDF'leri [ortak format](docs/proje-fikirleri/README.md) ile `docs/proje-fikirleri/gonderimler/` klasörüne PR üzerinden eklenir. PDF'yi birleştirmek, proje fikrini seçmek değildir.
+
+PR'larda güvenlik etkisini açıklayın. Kimlik/yetki, veri işleme, dış araç çağrıları veya ağ sınırları değişiyorsa güvenlik koordinatöründen inceleme isteyin. Ayrıntılar: [SDLC ve SSDLC](docs/SDLC-SSDLC.md).

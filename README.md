@@ -4,13 +4,33 @@ Beş yazılım mühendisliği son sınıf öğrencisi; web, agent, yapay zekâ, 
 
 **Durum: keşif aşaması. Proje fikri, hedef kitle ve teknoloji yığını henüz seçilmedi.** Bu repo fikirleri, araştırmayı, kararları ve daha sonra ürün geliştirmeyi ortak bir yerde toplar. Organizasyon adı bir çalışma adıdır.
 
-## Neden bir aradayız?
+## Vizyonumuz
 
-- İş başvurularında gösterebileceğimiz, katkılarımızın izlenebildiği bir ekip çalışması üretmek.
-- Gerçek bir kullanıcı problemini doğrulamak ve pazara giriş ihtimalini araştırmak.
-- Üç ay içinde dar kapsamlı, çalışan ve ölçülebilir bir ilk sürüm çıkarmak.
+Gerçek kullanıcıların hayatını kolaylaştıran, güvenilir ve sürdürülebilir yazılım ürünleri geliştiren; teknik yetkinliğini ekip çalışmasıyla görünür kılan bir mühendislik ekibi olmak.
 
-Pazar talebi ve gelir varsayımları henüz doğrulanmadı. Bir fikir önerisi, alınmış karar değildir.
+## Misyonumuz
+
+Web, agent, yapay zekâ, siber güvenlik ve ağ uzmanlıklarımızı ortak bir problem etrafında birleştirmek; kullanıcı araştırmasından bakım sürecine kadar yazılım geliştirme yaşam döngüsünü (SDLC) uygulayarak üç ayda test edilebilir bir MVP üretmek. Güvenliği her aşamaya entegre etmek, kararlarımızı belgelemek ve kullanıcı geri bildirimiyle iyileştirmek.
+
+## Amacımız
+
+- Gerçek bir kullanıcı problemini kanıtlarla belirlemek; fikri ve hedef kitleyi birlikte seçmek.
+- Üç ayda sınırlı kapsamlı, çalışan ve gerçek kullanıcılarla denenebilen bir MVP geliştirmek.
+- İş başvurularında gösterebileceğimiz güçlü bir portföy ve her üyenin katkısının izlenebildiği bir çalışma ortaya koymak.
+- Ürünün pazara giriş ve sürdürülebilir gelir ihtimalini araştırmak; varsayımları doğrulanmış sonuç gibi sunmamak.
+- Kod incelemesi, test, güvenlik ve dokümantasyon alışkanlıklarını birlikte geliştirmek.
+
+## Proje fikrini nasıl sunarız?
+
+Herkes aynı başlıkları içeren **Proje Fikri Şablonu v1.0** ile önerisini hazırlar. Düzenlenebilir [Markdown şablonunu](docs/proje-fikirleri/sablonlar/proje-fikri-sablonu.md) doldurun, [PDF örneğindeki](docs/proje-fikirleri/sablonlar/proje-fikri-sablonu.pdf) sırayı koruyarak PDF'ye aktarın ve [gönderimler klasörüne](docs/proje-fikirleri/gonderimler/README.md) PR ile yükleyin. Ayrıntılı [teslim kuralları burada](docs/proje-fikirleri/README.md).
+
+Bir PDF'nin repoya alınması fikrin seçildiği anlamına gelmez. Ürün kararı ayrıca ekipçe verilir.
+
+## Geliştirme yaklaşımımız: SDLC + SSDLC
+
+Planlama → gereksinim analizi → tasarım → geliştirme → test → yayın → bakım ve geri bildirim. Bu aşamalar kısa iterasyonlarla tekrar edilir; proje seçilmeden teknoloji yığını sabitlenmez.
+
+Siber güvenlik sorumlusu, güvenli yazılım geliştirme yaşam döngüsünü (SSDLC) koordine eder: güvenlik gereksinimleri, tehdit modelleme, güvenli tasarım, güvenlik incelemeleri ve testleri, yayın kontrolleri ve zafiyet takibi. **Güvenlik tüm ekibin sorumluluğudur; yalnızca en sonda yapılan bir test değildir.** [Aşamalar, çıktılar ve sorumluluklar](docs/SDLC-SSDLC.md).
 
 ## İlk hafta
 
