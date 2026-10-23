@@ -1,15 +1,15 @@
 # Proje Fikri Önerisi
 
-> Şablon v1.0 · Durum: öneri (proje kararı değildir)
+> Şablon v1.1 · Durum: öneri (proje kararı değildir)
 
 - Proje adı: [Doldurun]
 - Yazar / GitHub: [Doldurun]
 - Tarih: [YYYY-AA-GG]
 - Fikir sürümü: v01
-- Şablon sürümü: 1.0
+- Şablon sürümü: 1.1
 - İlgili issue: [Bağlantı]
 
-Hedef 4, en fazla 6 sayfa. Bölüm adları ve sırası korunur. Açıklama yönergelerini teslim öncesi kaldırın. Bilinmeyenler için “Henüz doğrulanmadı” ve araştırma adımını yazın.
+Bu dosyayı `gonderimler/kullaniciadi-fikir-kisa-adi.md` olarak kopyalayıp doldurun. Kısa ve somut yazın; bölüm adlarını ve sırasını koruyun. Açıklama yönergelerini teslim öncesi kaldırın. Bilinmeyenler için “Henüz doğrulanmadı” ve araştırma adımını yazın.
 
 ## 01. Problem ve kullanıcı
 
@@ -29,8 +29,6 @@ Hedef 4, en fazla 6 sayfa. Bölüm adları ve sırası korunur. Açıklama yöne
 
 [Doldurun]
 
----
-
 ## 04. MVP kapsamı ve ana akış
 
 > En fazla üç temel özellik ve kullanıcı akışını yazın. İlk sürümün özellikle dışında bırakılacak işleri belirtin.
@@ -49,8 +47,6 @@ Hedef 4, en fazla 6 sayfa. Bölüm adları ve sırası korunur. Açıklama yöne
 
 [Doldurun]
 
----
-
 ## 07. SDLC ve üç aylık plan
 
 > Planlama, analiz, tasarım, geliştirme, test, yayın ve bakım için kısa çıktı planı. Haftaları ve sorumlulukları önerin; bunlar nihai taahhüt değildir.
@@ -68,8 +64,6 @@ Hedef 4, en fazla 6 sayfa. Bölüm adları ve sırası korunur. Açıklama yöne
 > İşlevsel testler, AI varsa değerlendirme yöntemi, pilot kullanıcılar, yayın/geri dönüş ve bakım yaklaşımı. İlk sürümü nasıl doğrulayacağız?
 
 [Doldurun]
-
----
 
 ## 10. Pazar, maliyet ve uygulanabilirlik
 

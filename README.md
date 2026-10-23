@@ -20,11 +20,28 @@ Web, agent, yapay zekâ, siber güvenlik ve ağ uzmanlıklarımızı ortak bir p
 - Ürünün pazara giriş ve sürdürülebilir gelir ihtimalini araştırmak; varsayımları doğrulanmış sonuç gibi sunmamak.
 - Kod incelemesi, test, güvenlik ve dokümantasyon alışkanlıklarını birlikte geliştirmek.
 
+## Herkes repoyu kendi agent'ına bağlasın
+
+Her ekip üyesi repoyu bilgisayarına klonlayıp kullandığı agent/editörde proje olarak açar. GitHub entegrasyonu kullanıyorsa bu repoya erişimini de doğrular. Ortak kurallar [AGENTS.md](AGENTS.md) içinde; agent'ın bu dosyayı okuduğunu kontrol edin.
+
+```bash
+git clone https://github.com/fivefold-labs/project-hub.git
+cd project-hub
+```
+
+Agent'a verebileceğiniz başlangıç mesajı:
+
+> Önce README.md, AGENTS.md, CONTRIBUTING.md ve docs/AGENT-WORKFLOW.md dosyalarını oku. Projenin amacını ve mevcut aşamasını özetle. GitHub erişimin varsa #5 kurulum, #2 fikir havuzu ve #3 değerlendirme issue'larını incele; erişimin yoksa benden metinlerini iste. Benim görevime uygun bir branch üzerinde çalış; main'e doğrudan push yapma. Fikir önerimi ortak Markdown şablonuyla hazırlamama yardım et. Bulguları ve varsayımları ayır; proje veya teknoloji seçimini ekip adına yapma.
+
+Herkes [kurulum ve ilk katkı issue'suna #5](https://github.com/fivefold-labs/project-hub/issues/5) kurulum durumunu yazsın. [Adım adım agent çalışma rehberi](docs/AGENT-WORKFLOW.md).
+
 ## Proje fikrini nasıl sunarız?
 
-Herkes aynı başlıkları içeren **Proje Fikri Şablonu v1.0** ile önerisini hazırlar. Düzenlenebilir [Markdown şablonunu](docs/proje-fikirleri/sablonlar/proje-fikri-sablonu.md) doldurun, [PDF örneğindeki](docs/proje-fikirleri/sablonlar/proje-fikri-sablonu.pdf) sırayı koruyarak PDF'ye aktarın ve [gönderimler klasörüne](docs/proje-fikirleri/gonderimler/README.md) PR ile yükleyin. Ayrıntılı [teslim kuralları burada](docs/proje-fikirleri/README.md).
+[Ortak metin şablonunu](docs/proje-fikirleri/sablonlar/proje-fikri-sablonu.md) kopyalayın ve [gönderimler klasöründe](docs/proje-fikirleri/gonderimler/README.md) `kullaniciadi-fikir-kisa-adi.md` adıyla doldurun. Fikirler doğrudan Markdown (`.md`) olarak teslim edilir.
 
-Bir PDF'nin repoya alınması fikrin seçildiği anlamına gelmez. Ürün kararı ayrıca ekipçe verilir.
+Her öneri ayrı branch ve PR üzerinden, başka bir ekip üyesinin incelemesiyle alınır. PR bağlantısını [fikir havuzu #2'ye](https://github.com/fivefold-labs/project-hub/issues/2) ekleyin. [Teslim kuralları](docs/proje-fikirleri/README.md).
+
+Bir fikrin belgelenmesi, projenin seçildiği anlamına gelmez. Ürün kararı araştırma, ekip değerlendirmesi ve karar kaydıyla verilir.
 
 ## Geliştirme yaklaşımımız: SDLC + SSDLC
 
@@ -37,7 +54,7 @@ Siber güvenlik sorumlusu, güvenli yazılım geliştirme yaşam döngüsünü (
 1. **Ekibi tanıyalım ve problem/fikir havuzu oluşturalım:** Herkes haftalık müsaitliğini, güçlü alanlarını ve 1–2 problem önerisini ilk issue'ya yorum olarak ekler.
 2. **Fikirleri kullanıcı kanıtıyla değerlendirelim:** En fazla üç adayı karşılaştırır, ulaşabildiğimiz kullanıcılarla kısa görüşmeler yaparız. Hafta sonunda en güçlü adayları ve açık soruları kaydederiz; kanıt yetersizse seçim yapmayız.
 
-Aktif işler: [fikir havuzu #2](https://github.com/fivefold-labs/project-hub/issues/2) ve [değerlendirme #3](https://github.com/fivefold-labs/project-hub/issues/3).
+Aktif işler: [kurulum ve ilk katkı #5](https://github.com/fivefold-labs/project-hub/issues/5), [fikir havuzu #2](https://github.com/fivefold-labs/project-hub/issues/2) ve [değerlendirme #3](https://github.com/fivefold-labs/project-hub/issues/3).
 
 ## Nasıl katkı yapıyoruz?
 
@@ -47,7 +64,8 @@ Aktif işler: [fikir havuzu #2](https://github.com/fivefold-labs/project-hub/iss
 
 - [Katkı rehberi](CONTRIBUTING.md)
 - [Ekip ve çalışma anlaşması](docs/TEAM.md)
-- [Fikir önerisi şablonu](docs/ideas/TEMPLATE.md)
+- [Fikir önerisi şablonu](docs/proje-fikirleri/sablonlar/proje-fikri-sablonu.md)
+- [Agent çalışma kuralları](AGENTS.md)
 - [Değerlendirme yöntemi](docs/SELECTION.md)
 - [12 haftalık yol haritası](docs/ROADMAP.md)
 - [Karar kayıtları](docs/decisions/README.md)

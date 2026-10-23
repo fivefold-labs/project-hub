@@ -1,9 +1,9 @@
-# Fikir PDF gönderimleri
+# Fikir gönderimleri
 
-Tamamlanan önerileri bu klasöre ekleyin. Henüz teslim edilmiş bir fikir PDF'si yok.
+Kendi önerinizi bu klasöre Markdown (`.md`) dosyası olarak ekleyin. Henüz teslim edilmiş bir öneri yok.
 
-Dosya adı: `kullaniciadi-fikir-kisa-adi-v01.pdf`.
+Dosya adı: `kullaniciadi-fikir-kisa-adi.md`.
 
-[Şablon ve teslim kuralları](../README.md) · [Düzenlenebilir şablon](../sablonlar/proje-fikri-sablonu.md) · [PDF referansı](../sablonlar/proje-fikri-sablonu.pdf)
+[Ortak şablon](../sablonlar/proje-fikri-sablonu.md) · [Teslim kuralları](../README.md)
 
-Her gönderim ayrı branch ve PR üzerinden, başka bir üyenin onayıyla alınır. PDF'nin kabulü ürün seçimi anlamına gelmez.
+Her öneri ayrı branch ve PR üzerinden, başka bir üyenin onayıyla alınır. Önerinin belgelenmesi ürün seçimi değildir. Kişisel önerinizle ortak şablon dosyasını değiştirmeyin.
