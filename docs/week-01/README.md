@@ -1,6 +1,6 @@
 # İlk haftanın iki issue'su
 
-GitHub'da yayımlanmak üzere hazırlanmış taslaklar; henüz açılmış issue numarası değildir.
+GitHub üzerinde açıldı: [#2 fikir havuzu](https://github.com/fivefold-labs/project-hub/issues/2), [#3 değerlendirme](https://github.com/fivefold-labs/project-hub/issues/3). Aşağıdaki dosyalar ilk issue metinleridir.
 
 1. [Ekibi tanıyalım ve fikir havuzunu oluşturalım](01-fikir-havuzu.md)
 2. [Adayları kullanıcı kanıtıyla değerlendirelim](02-dogrulama.md)

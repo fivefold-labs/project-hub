@@ -9,7 +9,7 @@
 5. Başka bir ekip üyesinden review isteyin. En az bir onay alın; açık yorumları çözün.
 6. Yeni değişiklik sonrası gerekirse tekrar review isteyin. Uygun PR'ları squash merge yapın ve branch'i silin.
 
-main'e doğrudan push, force push ve main'i silmek ekip kurallarına aykırıdır. Public repoda bu kısıtlamalar GitHub branch protection ile uygulanacak; etkinleştirme durumu setup/README.md içinde izlenir. İlk repo oluşturma işlemi dışında normal katkılar daima PR ile yapılır.
+main'e doğrudan push, force push ve main'i silmek ekip kurallarına aykırıdır. Public repoda bu kısıtlamalar GitHub branch protection ile uygulanıyor; etkinleştirme durumu setup/README.md içinde izlenir. İlk repo oluşturma işlemi dışında normal katkılar daima PR ile yapılır.
 
 ## Review
 

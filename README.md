@@ -17,13 +17,13 @@ Pazar talebi ve gelir varsayımları henüz doğrulanmadı. Bir fikir önerisi, 
 1. **Ekibi tanıyalım ve problem/fikir havuzu oluşturalım:** Herkes haftalık müsaitliğini, güçlü alanlarını ve 1–2 problem önerisini ilk issue'ya yorum olarak ekler.
 2. **Fikirleri kullanıcı kanıtıyla değerlendirelim:** En fazla üç adayı karşılaştırır, ulaşabildiğimiz kullanıcılarla kısa görüşmeler yaparız. Hafta sonunda en güçlü adayları ve açık soruları kaydederiz; kanıt yetersizse seçim yapmayız.
 
-İlk iki issue'nun hazır metinleri [ilk hafta klasöründe](docs/week-01/README.md).
+Aktif işler: [fikir havuzu #2](https://github.com/fivefold-labs/project-hub/issues/2) ve [değerlendirme #3](https://github.com/fivefold-labs/project-hub/issues/3).
 
 ## Nasıl katkı yapıyoruz?
 
 **Ekip kuralı: main'e doğrudan push yok.** Her değişiklik ayrı branch ve pull request üzerinden, yazarı dışındaki en az bir ekip üyesinin incelemesiyle ilerler.
 
-> Kurulum hedefi: GitHub Free üzerinde public repo ve main için zorunlu PR/onay koruması. Koruma henüz GitHub üzerinde etkinleştirilmedi; kurulum tamamlandığında doğrulanacak. Ayrıntılar: [koruma ayarları](setup/README.md).
+> Kurulum doğrulandı (23 Ekim 2026): public repo, adminler dahil zorunlu PR ve en az bir başka üyeden onay; force push ve main silme kapalı. Ayrıntılar: [koruma ayarları](setup/README.md).
 
 - [Katkı rehberi](CONTRIBUTING.md)
 - [Ekip ve çalışma anlaşması](docs/TEAM.md)
@@ -39,4 +39,4 @@ Pazar talebi ve gelir varsayımları henüz doğrulanmadı. Bir fikir önerisi, 
 
 ## Kullanım ve lisans
 
-Lisans ve ürünün dağıtım modeli ekipçe henüz belirlenmedi. Repo public olarak yayımlanacak; bu, otomatik olarak bir açık kaynak lisansı verildiği anlamına gelmez. Üçüncü taraf kodların lisanslarını koruruz.
+Lisans ve ürünün dağıtım modeli ekipçe henüz belirlenmedi. Repo public olarak yayımlandı; bu, otomatik olarak bir açık kaynak lisansı verildiği anlamına gelmez. Üçüncü taraf kodların lisanslarını koruruz.
