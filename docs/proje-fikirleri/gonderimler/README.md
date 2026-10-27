@@ -9,4 +9,4 @@ Bu klasörde ekip üyelerinin proje önerileri bulunur. Bir önerinin repoya ekl
 
 Diğer öneriler ve yorumlar: [fikir havuzu #2](https://github.com/fivefold-labs/project-hub/issues/2).
 
-Yeni öneriler için [ortak şablon](../sablonlar/proje-fikri-sablonu.md) ve [katkı kuralları](../README.md) kullanılabilir. Bu iki anlatım kullanıcı isteğiyle projenin amacı ve kullanımı etrafında sadeleştirildi. Her değişiklik ayrı branch ve PR ile incelenir.
+Yeni öneriler için [ortak şablon](../sablonlar/proje-fikri-sablonu.md) ve [katkı kuralları](../README.md) kullanılabilir. İki öneri de ortak şablonun 12 bölümünü aynı sırayla izler; proje anlatımı bu başlıklar içinde korunmuştur. Her değişiklik ayrı branch ve PR ile incelenir.
