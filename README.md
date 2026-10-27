@@ -43,15 +43,12 @@ Her öneri ayrı branch ve PR üzerinden, başka bir ekip üyesinin incelemesiyl
 
 Bir fikrin belgelenmesi, projenin seçildiği anlamına gelmez. Ürün kararı araştırma, ekip değerlendirmesi ve karar kaydıyla verilir.
 
-## Değerlendirmeye sunulan app fikirleri
+## Değerlendirmeye sunulan iki uygulama fikri
 
-Süleyman'ın iki önerisi, düşük maliyet ve gerçek müşteriyle Forward Deployed Engineering (FDE) deneyimi hedefiyle inceleniyor. Henüz proje seçimi veya pilot müşteri anlaşması yapılmadı.
+- **[Ekran Görüntüsünden Aksiyon](docs/proje-fikirleri/gonderimler/suleymanssardogan-ekran-goruntusunden-aksiyon.md):** Telefonda kaydettiğimiz ekran görüntülerini aranabilir kayıtlara ve hatırlatıcılara dönüştüren mobil uygulama.
+- **[İş / Staj Başvuru Takipçisi](docs/proje-fikirleri/gonderimler/suleymanssardogan-is-staj-basvuru-takipcisi.md):** Başvuruları, görüşmeleri ve sonraki adımları tek yerde takip etmeyi sağlayan mobil uygulama.
 
-- [Ekran Görüntüsünden Aksiyon](docs/proje-fikirleri/gonderimler/suleymanssardogan-ekran-goruntusunden-aksiyon.md)
-- [İş / Staj Başvuru Takipçisi](docs/proje-fikirleri/gonderimler/suleymanssardogan-is-staj-basvuru-takipcisi.md)
-- [Karşılaştırmalı pazar, maliyet ve FDE raporu](docs/proje-fikirleri/raporlar/2026-10-27-iki-app-fde-degerlendirmesi.md)
-
-Diğer ekip önerileri [issue #2'de](https://github.com/fivefold-labs/project-hub/issues/2) yer alıyor; bu liste kısa liste veya seçim kararı değildir. Değerlendirme [issue #3](https://github.com/fivefold-labs/project-hub/issues/3) üzerinden yapılacak.
+İki belgede projenin amacı, hedef kullanıcıları, örnek kullanımı ve ilk sürüm kapsamı anlatılıyor. Bunlar Süleyman'ın önerileri; proje henüz seçilmedi. Diğer öneriler ve ekip yorumları [issue #2'de](https://github.com/fivefold-labs/project-hub/issues/2).
 
 ## Geliştirme yaklaşımımız: SDLC + SSDLC
 
