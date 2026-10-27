@@ -2,163 +2,210 @@
 
 > Şablon v1.1 · Durum: öneri (proje kararı değildir)
 
-- Proje adı: Ekran Görüntüsünden Aksiyon
-- Yazar / GitHub: Süleyman / @suleymanssardogan (agent desteğiyle hazırlanmıştır)
+- Proje adı: Ekran Görüntüsünden Aksiyon (çalışma adı)
+- Yazar / GitHub: Süleyman / @suleymanssardogan
 - Tarih: 2026-10-28
-- Fikir sürümü: v02
+- Fikir sürümü: v03
 - Şablon sürümü: 1.1
 - İlgili issue: [#2](https://github.com/fivefold-labs/project-hub/issues/2)
 
 ## 01. Problem ve kullanıcı
 
-**Amacımız:** Telefonda biriktirdiğimiz ekran görüntülerini, sonradan bulabildiğimiz ve zamanı geldiğinde hatırlatma alabileceğimiz kayıtlara dönüştüren bir mobil uygulama geliştirmek.
+İnternette gördüğümüz bir ilanı, ürünü veya duyuruyu daha sonra değerlendirmek için ekran görüntüsü alıyoruz. Ancak görüntü galeride kaldığında şu soruların cevabını bulmak zorlaşıyor:
 
-Bir staj ilanı, beğendiğimiz ürün veya etkinlik duyurusu gördüğümüzde ekran görüntüsü alıyoruz. Görsel galeride başka fotoğraflarla karışabiliyor; neyi neden kaydettiğimizi unutabiliyor veya içindeki tarihi kaçırabiliyoruz. Bu sorunun ne sıklıkta yaşandığını kullanıcılarla doğrulamamız gerekiyor.
+- Kaydettiğim ilan hangi şirketindi ve son başvuru tarihi neydi?
+- Beğendiğim ürünün ekran görüntüsü nerede?
+- Bu görseli neden kaydetmiştim; yapmam gereken bir şey var mıydı?
 
-**Hedef kullanıcı:** İlan, ürün ve duyuruları ekran görüntüsüyle kaydeden kişiler. İlk görüşmeler üniversite öğrencileriyle yapılabilir; ürün yalnızca üniversite etkinliklerine bağlı değildir.
+Bugün bunları galeride arayarak, ayrı bir not yazarak veya takvime elle hatırlatma ekleyerek çözebiliyoruz. Görseli saklamakla sonraki adımı takip etmek birbirinden ayrı kalıyor.
 
-**Örnek:** Ayşe bir staj ilanının görselini uygulamaya paylaşır. Uygulama şirket, pozisyon ve varsa son tarih için taslak çıkarır. Ayşe alanları düzeltir ve bir gün önce hatırlatma kurar. Daha sonra şirket adıyla arayıp orijinal görsele ve notuna ulaşır.
+**Amacımız:** Kullanıcının seçtiği ekran görüntüsünü okuyup düzenlenebilir bir kayda dönüştüren; kaydı arayarak bulmayı ve ilgili iş için hatırlatma kurmayı sağlayan bir mobil uygulama geliştirmek.
+
+**Hedef kullanıcılar:** İlan, ürün ve duyuruları ekran görüntüsüyle biriktiren kişiler. İlk kullanıcı denemelerini ulaşabildiğimiz öğrenciler ve arkadaş çevremizle yapabiliriz.
 
 ## 02. Kanıt ve varsayımlar
 
-**Kaynaklarla doğrulananlar:**
+**Doğrulanan bulgular (kaynaklı):**
 
-- [Pixel Screenshots](https://support.google.com/pixelphone/answer/15312581?hl=en) zaten arama, önerilen aksiyonlar ve hatırlatma sunuyor; cihaz, dil ve bölge koşulları var.
-- [mymind](https://mymind.com/pricing) görseldeki yazıyla arama ve AI etiketleme sunuyor.
-- [ML Kit dil listesinde](https://developers.google.com/ml-kit/vision/text-recognition/v2/languages) Türkçe yer alıyor. Desteklenmesi, kendi görsellerimizde hedef doğruluğa ulaştığımız anlamına gelmez.
+- [Pixel Screenshots](https://support.google.com/pixelphone/answer/15312581?hl=en), ekran görüntülerinde arama, aksiyon önerileri ve hatırlatıcı sunuyor. Resmî sayfada cihaz, dil ve bölge sınırları bulunuyor.
+- [mymind](https://mymind.com/pricing), görüntü metni tanıma ve otomatik etiketleme sunuyor. Yani bu alanda mevcut ürünler var.
+- [ML Kit](https://developers.google.com/ml-kit/vision/text-recognition/v2/languages), Türkçe metin tanımayı destekliyor. Kendi görsellerimizdeki doğruluk teknik deneyle ölçülecek.
 
-**Henüz doğrulanmayanlar:** Kullanıcıların mevcut galerilerinde yeterince zorlandığı, Türkçe alan çıkarımının yeterli çalışacağı, ayrı uygulama açmanın değeceği ve ödeme isteği. Henüz görüşme, prototip testi veya satış yapılmadı. Kendi deneyimimizi pazar kanıtı saymıyoruz.
+**Henüz doğrulanmadı (varsayımlar):**
+
+- Kullanıcıların galeride arama ve ayrı hatırlatıcı oluşturma işini önemli bir sorun olarak gördüğü. Araştırma: son kaydettikleri görseller üzerinden kullanıcı görüşmesi.
+- Türkçe ilanlardan yeterince doğru başlık/tarih çıkarılabildiği. Araştırma: farklı görsellerle OCR deneyi.
+- Kullanıcıların mevcut araçları yerine bu uygulamayı düzenli kullanacağı veya ücretli özellik isteyeceği. Araştırma: bir haftalık kullanım denemesi.
+
+Henüz kullanıcı görüşmesi veya çalışan ürün testi yapılmadı.
 
 ## 03. Değer önerisi ve alternatifler
 
-**Değer önerisi:** “Kaydettiğin ekran görüntüsünü kolayca bul; içindeki işi unutma.” Görseli yalnızca arşivlemek yerine kullanıcı tarafından doğrulanmış bir aksiyon kaydı oluşturmak istiyoruz.
+**Değer önerisi:** Ekran görüntüsünü yalnızca saklamak yerine içindeki bilgiyi, kullanıcının kontrol edebildiği bir kayda ve sonraki adıma dönüştürmek.
 
-| Alternatif | Neyi çözüyor? | Bizim sınayacağımız fark |
+**Mevcut alternatifler:**
+
+| Alternatif | Ne yapıyor? | Bizim olası farkımız |
 |---|---|---|
-| [Pixel Screenshots](https://support.google.com/pixelphone/answer/15312581?hl=en) | Arama, koleksiyonlar, aksiyonlar ve hatırlatıcı | Hedef Android cihazlarda Türkçe ve az adımlı kayıt akışı yeterli değer yaratır mı? |
-| [mymind](https://mymind.com/pricing) | Görsel içerik tanıma, etiketleme ve kişisel arşiv | Düzenlenebilir alanlar ve bir sonraki aksiyona odaklanmak yararlı mı? |
-| Galeri + notlar/takvim | Kullanıcının mevcut yöntemi; görüşmede gözlemlenecek | Görseli bulma ve hatırlatma oluşturma süresi gerçekten azalıyor mu? |
+| [Pixel Screenshots](https://support.google.com/pixelphone/answer/15312581?hl=en) | Arama, koleksiyon, aksiyon ve hatırlatma | Hedeflediğimiz Android cihazlarda Türkçe alanlar ve tek akışta kayıt; kullanım değeri test edilecek |
+| [mymind](https://mymind.com/pricing) | Görselleri okuyup etiketleyen kişisel arşiv | Kaydı başlık/tarih/not olarak düzenleme ve yapılacak işe odaklanma |
+| Galeri + not/takvim | Görseli bulma ve hatırlatmayı ayrı araçlarda yapma | Bu adımları aynı kayıtta toplama |
 
-**Rekabet riski:** “OCR ve hatırlatıcı” benzersiz bir özellik birleşimi değil. Hatırlatmayı tek başına farkımız diye sunamayız. Kullanıcı mevcut aracıyla rahatça çözüyorsa bu fikir ticari öncelik olmayabilir.
+Arama ve hatırlatma rakiplerde de var. Farkımızın “Türkçe, kolay ve düzenlenebilir bir aksiyon akışı” olup olamayacağını ilk kullanıcı denemesinde araştıracağız.
 
 ## 04. MVP kapsamı ve ana akış
 
-**İlk sürümün üç temel özelliği:**
+**Üç temel özellik:**
 
-1. **Görselden kayıt:** Paylaş menüsü/görsel seçici, cihazda metin okuma ve düzenlenebilir başlık, kategori, tarih taslağı.
-2. **Kayıtları bulma:** Metin, başlık ve etiketle arama; kayda not ekleme, orijinal görsele dönme, düzenleme ve silme.
-3. **Aksiyon:** Kullanıcının doğruladığı tarih ve açıklamayla yerel hatırlatıcı; tamamlandı/ertelendi durumu.
+1. **Görselden kayıt oluşturma:** Kullanıcı ekran görüntüsünü seçer veya paylaş menüsünden gönderir. Metin okunur; başlık, kategori ve varsa tarih için düzenlenebilir taslak hazırlanır.
+2. **Arama ve düzenleme:** Başlık, metin ve etiketle kayıt aranır. Kullanıcı not ekler, orijinal görsele döner, kaydı düzenler veya siler.
+3. **Hatırlatma ve aksiyon takibi:** Kullanıcı doğruladığı tarih için hatırlatıcı kurar; işi tamamlandı olarak işaretler veya erteler.
 
-**Ana akış:** Görseli seç → metni oku → alanları kontrol et → kaydet → hatırlatıcı kur → arayarak geri dön.
+**Ana akış:**
 
-Başlangıçta tek mobil platform hedeflenir. Görüşmeler sonucunda bir içerik türü önceliklendirilir; ilan, ürün ve etkinliğin tamamını aynı anda kusursuz tanıma sözü verilmez.
+1. Ayşe bir staj ilanının ekran görüntüsünü uygulamaya paylaşır.
+2. Şirket, pozisyon ve son tarih taslak olarak çıkarılır; Ayşe kontrol edip düzeltir.
+3. “Başvuru yap” notunu ekleyip bir gün öncesine hatırlatma kurar.
+4. Daha sonra şirket adıyla arayarak ilan görseline ve notuna ulaşır.
 
-**Kapsam dışı:** Tüm galeriyi otomatik tarama, sosyal ağ, satın alma veya başvuru yapma, iOS ile eşzamanlı geliştirme, bulut senkronizasyonu ve genel amaçlı sohbet agent'ı.
+**İlk sürümün dışında kalacaklar:**
+
+- Tüm galeriyi otomatik tarama ve bulut senkronizasyonu.
+- Otomatik alışveriş, başvuru veya mesaj gönderimi.
+- Sosyal ağ ve genel amaçlı sohbet asistanı.
+- Android ve iOS'u aynı anda geliştirme. İlk platform ekip kapasitesiyle seçilir.
+
+İlk denemede tek bir içerik türü önceliklendirilir. İlan, ürün ve etkinliğin hepsini aynı anda kusursuz tanımak MVP hedefi değildir.
 
 ## 05. Gereksinimler ve başarı ölçütleri
 
 **Kullanıcı hikâyeleri:**
 
-- Kullanıcı olarak kaydettiğim ilanın başlığını ve son tarihini kontrol ederek hatırlatma kurabilmek istiyorum.
-- Kaydımı bir kelimeyle arayıp orijinal görüntüyü bulmak istiyorum.
-- Görsel ve çıkarılan metinleri istediğimde silebilmek istiyorum.
+- Kaydettiğim ilanın son tarihini kontrol ederek hatırlatma kurmak istiyorum.
+- Görseli bir kelimeyle arayıp bulmak ve neden kaydettiğimi görmek istiyorum.
+- İçeriğimi istediğimde düzenlemek ve tamamen silmek istiyorum.
 
-**Önerilen kabul ölçütleri; henüz ölçülmedi:**
+**İşlevsel olmayan beklentiler:**
 
-- Kaynakta olmayan tarih oluşturulmaz; belirsiz/eksik tarih kullanıcıya sorulur veya boş kalır.
-- 50 izinli/sentetik görselde başlık/kategori/tarih için alan bazında sonuç raporlanır. Kaynakta açık olan tarihlerde en az %90 doğru çıkarım ilk teknik hedeftir; yanlış ve boş sonuçlar ayrı sayılır.
-- Beş pilot kullanıcının en az dördü kaydetme, arama ve hatırlatıcı oluşturma görevlerini yardım almadan tamamlar.
-- Hatırlatıcı izni reddedilirse bu durum açıkça gösterilir. Cihaz ve işletim sistemi kısıtları nedeniyle kesin teslim garantisi verilmez.
-- Temel kayıt ve arama çevrimdışı çalışır; kullanıcı içerikleri varsayılan olarak dış servise gönderilmez.
+- Temel kayıt ve arama, model hazırlığından sonra çevrimdışı çalışmalı.
+- Görsel ve çıkarılan metin varsayılan olarak cihazda kalmalı.
+- Eksik tarih uydurulmamalı; belirsiz bilgi kullanıcıya sorulmalı.
+- Bildirim izni yoksa kullanıcı bunu görebilmeli.
+
+**Kabul ölçütleri (önerilen hedefler):**
+
+- 50 izinli/sentetik görselde, açıkça yazılmış tarihler için en az %90 doğru çıkarım.
+- Beş pilot kullanıcının en az dördünün kayıt, arama ve hatırlatma görevlerini yardımsız tamamlaması.
+- Kullanıcıların medyan görev süresinin mevcut yöntemlerine göre en az %30 kısalması.
+
+Bu değerler test sonucu değil; ürün seçilirse ölçülecek hedeflerdir.
 
 ## 06. Teknik yaklaşım ve ekip katkısı
 
-**Teknik yaklaşım önerisi:** Mobil istemci → cihazda OCR → alan çıkarımı → kullanıcı doğrulaması → yerel veri deposu/arama → yerel hatırlatma.
+**Olası bileşenler:**
 
-[Android ML Kit OCR](https://developers.google.com/ml-kit/vision/text-recognition/v2/android) teknik adaylardan biri. Önce OCR ve basit kurallarla bir başlangıç sonucu ölçülür. Güçlü bir yerel LLM'nin her telefonda çalışacağı varsayılmaz; ücretli AI çağrısı temel akışın şartı değildir. Teknoloji seçimi ilk haftadaki cihaz denemesinden sonra yapılır.
+- **Mobil uygulama:** Görsel paylaşımı, kayıt ekranı, arama ve hatırlatıcılar.
+- **Metin tanıma:** [Android ML Kit OCR](https://developers.google.com/ml-kit/vision/text-recognition/v2/android) gibi cihazda çalışan bir çözüm.
+- **Alan çıkarımı:** Metinden başlık, kategori ve tarih önerisi; önce basit kurallar, gerekirse AI yaklaşımı.
+- **Yerel veri deposu:** Görsel bağlantısı, çıkarılan metin, not, etiket ve aksiyon durumu.
 
-| Alan | Anlamlı katkı önerisi |
-|---|---|
-| Süleyman / AI ve sistem tasarımı | Alan modeli, çıkarım yaklaşımı ve doğruluk değerlendirmesi |
-| Mobil/web | Paylaşım, doğrulama, arama ve hatırlatma ekranları |
-| Agent/backend | Araçlardan oluşan onaylı işlem akışı; ayrı agent yarar sağlamazsa eklenmez |
-| Siber güvenlik | Yerel veri, dosya yükleme, izin ve silme testleri |
-| Ağ/altyapı | Çevrimdışı/model indirme davranışı, ağ trafiği doğrulaması ve sürüm dağıtımı |
+**En büyük teknik belirsizlik:** Farklı tasarımlardaki Türkçe ekran görüntülerinden doğru tarih ve başlık çıkarabilmek. Her telefonda güçlü bir yerel LLM çalıştığı varsayılmayacak; AI olmadan düzeltme/kayıt akışı çalışacak.
 
-**Ekip uyumu sınırı:** Bu fikir mobil ve AI ağırlıklı. Ağ/altyapı ve backend işi daha dar kalabilir. Beş kişinin de derin uzmanlık işi yapması öncelikse bu dezavantajı seçimde hesaba katmalıyız; sırf görev üretmek için sunucu eklememeliyiz.
+**Ekip katkısı önerisi:**
+
+- **Mobil/web:** Paylaş menüsü, doğrulama ekranı ve arama deneyimi.
+- **AI ve sistem tasarımı (Süleyman):** Alan modeli, OCR/çıkarım yaklaşımı ve değerlendirme.
+- **Agent/entegrasyon:** Metin → taslak → kullanıcı onayı → kayıt adımlarını yönetme; ayrı agent gerekmiyorsa eklememe.
+- **Ağ/altyapı:** Çevrimdışı çalışma, model indirme/ağ kesintisi testleri ve sürüm dağıtımı.
+- **Siber güvenlik:** İzinler, cihazda saklama, silme ve bildirim gizliliği.
+
+Bu proje mobil ve AI ağırlıklı; ağ/backend tarafında daha sınırlı iş çıkarabilir. Beş kişinin uzmanlık beklentisi değerlendirilirken bu nokta hesaba katılmalı. Kişi bazında son görev dağılımı ekipçe yapılacak.
 
 ## 07. SDLC ve üç aylık plan
 
-| Hafta | Somut çıktı |
+| Hafta | Çıktı |
 |---|---|
-| 1–2 | Kullanıcı görüşmeleri, mevcut yöntemle karşılaştırma, OCR deneyi; ilk içerik ve platform seçimi |
-| 3–4 | Görsel seçme → metin → elle düzeltme → kayıt akışının çalışan sürümü |
-| 5–6 | Arama, etiket, tarih doğrulama ve hatırlatma |
-| 7–8 | İzin, silme, çevrimdışı davranış ve cihaz testleri |
-| 9–10 | Sınırlı pilot; tekrar kullanım ve hata ölçümü |
-| 11–12 | Düzeltmeler, stabil demo, kurulum ve bakım notları |
+| 1–2 | Kullanıcı görüşmeleri; 50 görselde OCR/alan çıkarımı deneyi; ilk platform ve içerik türü |
+| 3–4 | Görsel seç → metni oku → düzelt → kaydet akışının çalışan sürümü |
+| 5–8 | Arama, etiketler, hatırlatma, silme ve cihaz/güvenlik testleri |
+| 9–10 | Küçük pilot grup; geri bildirim, tekrar kullanım ve hata ölçümü |
+| 11–12 | Düzeltmeler, stabil demo, kurulum rehberi ve sonuç raporu |
 
-Analiz ve tasarım kararları yazılı tutulur; güvenlik kontrolleri her aşamada uygulanır. Bu plan ürün seçilirse detaylandırılacak bir öneridir. Fikir onayı olmadan uygulama geliştirmeye başlanmış sayılmaz.
+Planlama, analiz, tasarım, geliştirme, test, yayın ve bakım çıktıları kısa iterasyonlarla tutulur. Güvenlik çalışmaları sürece eşlik eder. Takvim ve sorumluluklar proje seçilirse ekipçe kesinleştirilir.
 
 ## 08. SSDLC ve güvenlik riskleri
 
-**Temel güvenlik gereksinimi:** Kullanıcının seçtiği görsel ve çıkarılan metin varsayılan olarak cihazda işlenir/saklanır; içerik dış servise gönderilmez. Bir sağlayıcı kullanılırsa model/SDK indirme ve telemetri trafiği ayrıca incelenir. Cihazda OCR, hiç ağ trafiği olmadığı anlamına gelmez.
+**Hassas veriler ve güven sınırları:** Ekran görüntüsünde mesaj, kimlik, banka bilgisi veya parola bulunabilir. Görsel seçimi, uygulama deposu, cihaz yedeği ve olası dış servisler incelenecek.
 
-| Risk | Önlem ve doğrulama |
-|---|---|
-| Görselde kimlik, mesaj, banka veya parola bulunması | Yalnızca seçilen görsele erişim; ham içeriği loglamama; testlerde gerçek hassas veri kullanmama; bildirimde özel içeriği varsayılan gizleme |
-| Cihaz kaybı/yedeği üzerinden veri açılması | Uygulama depolama/yedekleme davranışını inceleme; silinen kayda ve kopyalarına erişim testi |
-| Yanlış tarihten aksiyon veya görsel metninden komut çalıştırma | Tarih doğrulaması, kullanıcı onayı; OCR çıktısını veri olarak işleme, otomatik dış işlem yapmama |
+**En önemli üç risk:**
 
-Siber güvenlik sorumlusu veri akışını, izinleri ve silme gereksinimlerini inceler. Fotoğraflar public repoya yüklenmez. SSDLC bu gereksinimlerin geliştirme ve test boyunca izlenmesidir.
+1. **Gereksiz veri erişimi:** Yalnızca kullanıcının seçtiği görsel işlenir; tüm galeriye otomatik erişilmez. Ham görüntü/metin loglara yazılmaz.
+2. **Verinin cihaz veya bildirim üzerinden açılması:** Depolama/yedekleme ve silme davranışı test edilir; kilit ekranında özel içerik varsayılan gizlenir.
+3. **Yanlış bilgiyle işlem yapılması:** Tarih ve alanlar kullanıcıya doğrulatılır; görseldeki metin komut olarak yürütülmez; otomatik dış işlem yapılmaz.
+
+**Güvenlik testleri:** İzin reddi, desteklenmeyen/büyük görsel, veri silme, bildirim gizliliği ve ağ trafiğinde içerik sızıntısı testleri.
+
+**Açık sorular:** Cihaz yedeğine hangi veriler girecek? SDK telemetrisi ne içeriyor? [ML Kit açıklaması](https://developers.google.com/ml-kit/terms) cihazda işleme ile SDK ağ/telemetri davranışını ayırıyor; bu ayrım seçilecek çözümde doğrulanacak.
 
 ## 09. Test, yayın ve işletim
 
-**Testler:** Türkçe karakter, küçük yazı, karanlık tema, bir görselde birden fazla tarih, yılı olmayan tarih, düşük kontrast ve aynı görselin tekrar eklenmesi. En az iki mevcut Android cihazında çevrimdışı çalışma, izin reddi, yeniden başlatma ve model hazırlığı denenir.
+- **İşlevsel testler:** Görsel ekleme, düzenleme, arama, hatırlatma, tamamlandı/ertelendi ve silme akışları.
+- **AI değerlendirmesi:** Türkçe karakter, küçük yazı, karanlık tema, eksik/yılı olmayan tarih içeren sabit görsel kümesi. Başlık, kategori ve tarih ayrı ölçülür; yanlış ve boş sonuçlar ayrı raporlanır.
+- **Pilot kullanıcılar:** Düzenli ekran görüntüsü kaydeden en az beş gönüllü.
+- **Yayın ve bakım:** Önce tek platformda sınırlı test sürümü; anonim hata takibi, sürüm kaydı ve önceki sürüme dönüş rehberi.
 
-**AI değerlendirmesi:** Sabit ve izinli/sentetik örnek kümesinde çıkarılan her alan kaynakla karşılaştırılır. Kritik tarih hataları genel ortalamada gizlenmez. Kullanıcının düzeltme süresi de ölçülür.
-
-**Yayın ve işletim:** Önce küçük bir gönüllü test grubu; dağıtım yöntemi güncel platform koşullarıyla seçilir. Sürüm, anonim hata kaydı, maliyet ve geri dönüş yöntemi belgelenir. Mağaza yayını ilk deneyin zorunlu çıktısı değildir. Şu an uygulama veya çalıştırılmış ürün testi yok.
+En az iki mevcut cihazda çevrimdışı çalışma, uygulama yeniden başlatma ve bildirim izni reddi kontrol edilir. Gerçek hassas ekran görüntüleri public repoya eklenmez.
 
 ## 10. Pazar, maliyet ve uygulanabilirlik
 
-**İlk kullanıcı:** Ekran görüntüsüyle ilan/ürün/duyuru biriktiren kişiler; ilk erişim öğrenciler ve yakın çevre. **Olası ödeme yapan:** Bireysel kullanıcı. Ödeme isteği doğrulanmadı; ücretsiz yerleşik alternatifler önemli bir engel.
+- **Kullanıcı:** İlan, ürün ve duyuru ekran görüntülerini saklayan kişiler.
+- **Ödeme yapan taraf:** Olası bireysel kullanıcı. Ücretli gelişmiş özellik modeli düşünülebilir; ödeme isteği henüz doğrulanmadı.
+- **Nasıl ulaşırız:** İlk aşamada öğrenciler ve yakın çevremiz; ardından aynı davranışı gösteren daha geniş bir test grubu.
+- **Maliyet yaklaşımı:** OCR, arama ve kayıt cihazda çalışırsa merkezi sunucu ve sürekli ücretli AI çağrısı zorunlu olmaz. Yeni cihaz, mağaza yayını ve destek emeği ayrıca hesaplanır. Hazır araçların lisans/dağıtım koşulları seçilmeden önce kontrol edilir.
+- **Uygulanabilirlik:** Tek platform ve üç temel özellik üzerinde üç aylık bir MVP denenebilir. Her tür görseli anlayan genel asistan kapsamı bu süreyi aşar.
 
-Olası gelir modeli, temel kullanım ücretsizken ileride gelişmiş düzenleme/yedekleme özellikleri için ücret alınması olabilir; henüz karar veya gelir tahmini değildir. Önce tekrar kullanım kanıtı gerekir.
-
-| Kalem | İlk sürüm yaklaşımı |
-|---|---|
-| OCR ve arama | Cihazda çalışma; merkezi görsel depolama yok |
-| AI API | Zorunlu değil; eklenirse onaylı kullanım ve bütçe sınırı gerekir |
-| Sunucu | Yerel MVP için gerekli değil |
-| Diğer maliyet | Mevcut cihaz/ekipman varsayımı; yeni cihaz, mağaza, bakım emeği ayrıca hesaplanır |
-
-Düşük maliyet hedefi sıfır toplam maliyet garantisi değil. Hazır araçların fiyat/koşulları teknoloji seçimi sırasında teyit edilir. En büyük belirsizlik geliştirme giderinden çok kullanıcıya mevcut araçlardan daha değerli gelmesi ve beş kişiye uygun kapsam oluşturmasıdır.
+Ücretsiz yerleşik özellikler güçlü rekabet oluşturuyor. Bu nedenle ilk başarı ölçütü gelir tahmini değil, kullanıcının mevcut yöntemi yerine uygulamayı tekrar açmasıdır.
 
 ## 11. İlk doğrulama deneyi
 
-**Önerilen sorumlu:** @suleymanssardogan; ilk deney koordinasyonu. Mobil/güvenlik desteği verecek üyeler ekipçe belirlenecek.
+**Önerilen sorumlu:** @suleymanssardogan; mobil ve güvenlik desteği ekipçe belirlenecek.
 
 **Bir haftalık deney:**
 
-1. Düzenli ekran görüntüsü kaydeden beş kişiyle son kaydettikleri içerikleri nasıl bulduklarını gözlemle.
-2. Her katılımcıyla hassas içeriği çıkarılmış beş örnekte mevcut yöntemle bulma/hatırlatma süresini ölç.
-3. Basit etkileşimli akış veya teknik taslakla aynı görevleri denet; görev sırasını değiştirerek öğrenme etkisini azalt.
-4. Mevcut galeri/not yöntemi ile yeni akışı süre ve düzeltme ihtiyacı açısından karşılaştır. Yalnızca “beğendim” yanıtını talep kanıtı sayma.
+1. **Teknik:** İzinli/sentetik 50 ekran görüntüsünde metin ve tarih çıkarımını dene. Hangi alanların yanlış veya eksik geldiğini kaydet.
+2. **Kullanıcı:** Beş kişiyle kendi galeri/not yöntemlerinde görsel bulma ve hatırlatma oluşturma görevlerini gözlemle. Aynı görevleri basit prototipte denet; süre ve düzeltme ihtiyacını karşılaştır.
+3. **Tekrar kullanım:** Hafta içinde ikinci kez kayıt ekleyip eklemediklerini gözlemle.
 
-**İlerleme eşiği:** En az 4/5 kişi görevi yardımsız tamamlar; kullanıcıların medyan görev süresi en az %30 azalır; en az üç kişi bir hafta içinde ikinci kez kullanmayı dener. Bunlar deney öncesi önerilen hedeflerdir.
+**Başarı eşiği:**
 
-**Vazgeçme/daraltma koşulu:** Mevcut araç aynı işi yeterince iyi yapıyor, kullanıcı uygulamaya geçmiyor veya tarih düzeltme yükü kazancı ortadan kaldırıyorsa genel arşiv fikri daraltılır ya da elenir. İlan türü belirgin şekilde daha yararlıysa yalnızca o akış değerlendirilir.
+- Beş kişiden en az dördünün temel görevleri yardımsız tamamlaması.
+- Medyan görev süresinin mevcut yönteme göre en az %30 azalması.
+- En az üç kişinin hafta içinde ikinci kez kullanması.
+
+**Fikri değiştirecek sonuç:** Mevcut araçlar aynı işi yeterince kolay yapıyorsa genel arşiv fikri elenir veya tek içerik türüne daraltılır. En belirgin ihtiyaç staj ilanlarında çıkarsa başvuru takipçisiyle bağlantı ayrıca değerlendirilir.
 
 ## 12. Kaynaklar, açık sorular ve karar isteği
 
-**Kaynaklar — son kontrol: 28 Ekim 2026.** Ürün sayfaları resmî özellik beyanıdır; uygulamaları bağımsız olarak denemedik.
+**Kaynaklar (kontrol tarihi: 2026-10-28):**
 
-- [Pixel Screenshots](https://support.google.com/pixelphone/answer/15312581?hl=en): arama, aksiyon ve hatırlatıcı özellikleri.
-- [mymind](https://mymind.com/pricing): görüntü metniyle arama ve etiketleme.
-- [ML Kit Android OCR](https://developers.google.com/ml-kit/vision/text-recognition/v2/android) ve [dil listesi](https://developers.google.com/ml-kit/vision/text-recognition/v2/languages): teknik araştırma adayları.
-- [ML Kit veri işleme açıklaması](https://developers.google.com/ml-kit/terms): cihazda işlem ve SDK trafiği ayrımı.
+- [Google — Pixel Screenshots](https://support.google.com/pixelphone/answer/15312581?hl=en)
+- [mymind — özellik ve planlar](https://mymind.com/pricing)
+- [Google — Android ML Kit OCR](https://developers.google.com/ml-kit/vision/text-recognition/v2/android)
+- [Google — OCR desteklenen diller](https://developers.google.com/ml-kit/vision/text-recognition/v2/languages)
+- [Google — ML Kit veri işleme açıklaması](https://developers.google.com/ml-kit/terms)
 
-**Açık sorular:** Hangi içerik türü, hangi mobil platform, mevcut araçlara karşı hangi ölçülebilir fark, beş kişilik ekip için yeterli teknik kapsam var mı?
+Kaynaklar resmî ürün/teknik açıklamalardır; rakip uygulamalar bağımsız test edilmedi.
 
-**Ekipten istediğim:** Önce bir haftalık deneye alınmasını ve kapsamın tartışılmasını değerlendirelim. [Başvuru takipçisiyle](suleymanssardogan-is-staj-basvuru-takipcisi.md) birleştirme, ileride ekran görüntüsünden başvuru kaydı üretme şeklinde düşünülebilir; şu an iki ayrı öneri ve tek ürün kararı alınmadı. Kabul, [seçim ölçütleriyle](../../SELECTION.md) ve [issue #3'te](https://github.com/fivefold-labs/project-hub/issues/3) değerlendirilecek.
+**Açık sorular:**
+
+- İlk içerik türü ilan mı, ürün mü, etkinlik mi olsun?
+- Galeri/not uygulamasına göre kullanıcının hissedeceği fark ne olacak?
+- Mobil kapasitemiz ve beş kişilik ekip için iş dağılımı uygun mu?
+
+**Ekipten beklenen geri bildirim:**
+
+- Bu problemi siz yaşıyor musunuz; en son nasıl çözdünüz?
+- İlk görsel/cihaz denemesine kim destek olabilir?
+- [Başvuru takipçisiyle](suleymanssardogan-is-staj-basvuru-takipcisi.md) “ilan görseli → başvuru kaydı” şeklinde birleşmesi daha anlamlı olur mu?
+
+Bu metin bir öneridir. Proje seçimi [değerlendirme yöntemi](../../SELECTION.md) ve ekip kararıyla yapılacak.
