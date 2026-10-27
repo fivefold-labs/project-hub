@@ -9,7 +9,7 @@
 5. Başka bir ekip üyesinden review isteyin. En az bir onay alın; açık yorumları çözün.
 6. Yeni değişiklik sonrası gerekirse tekrar review isteyin. Uygun PR'ları squash merge yapın ve branch'i silin.
 
-main'e doğrudan push, force push ve main'i silmek ekip kurallarına aykırıdır. Public repoda bu kısıtlamalar GitHub branch protection ile uygulanacak; etkinleştirme durumu setup/README.md içinde izlenir. İlk repo oluşturma işlemi dışında normal katkılar daima PR ile yapılır.
+main'e doğrudan push, force push ve main'i silmek ekip kurallarına aykırıdır. Public repoda bu kısıtlamalar GitHub branch protection ile uygulanıyor; etkinleştirme durumu setup/README.md içinde izlenir. İlk repo oluşturma işlemi dışında normal katkılar daima PR ile yapılır.
 
 ## Review
 
@@ -23,3 +23,11 @@ Kişiyi değil değişikliği değerlendirin. Sorunu, nedenini ve mümkünse bir
 - Başka bir ekip üyesi inceledi ve önemli yorumlar çözüldü.
 
 Henüz uygulama veya test altyapısı yok; çalıştırılmamış testleri geçmiş gibi göstermeyin. Teknoloji yığını seçilince kurulum, test ve CI komutları eklenecek.
+
+## Fikir metinleri, agent kullanımı ve güvenlik etkisi
+
+Fikir metinleri [ortak format](docs/proje-fikirleri/README.md) ile `docs/proje-fikirleri/gonderimler/` klasörüne `.md` dosyası olarak PR üzerinden eklenir. Metnin birleştirilmesi, proje fikrinin seçildiği anlamına gelmez.
+
+PR'larda güvenlik etkisini açıklayın. Kimlik/yetki, veri işleme, dış araç çağrıları veya ağ sınırları değişiyorsa güvenlik koordinatöründen inceleme isteyin. Ayrıntılar: [SDLC ve SSDLC](docs/SDLC-SSDLC.md).
+
+Agent ile çalışırken [AGENTS.md](AGENTS.md) ve [başlangıç rehberini](docs/AGENT-WORKFLOW.md) izleyin. Her üye kendi agent oturumunu repo klasörüne bağlar; yaptığı değişikliği inceleme ve doğrulama sorumluluğunu taşır.
