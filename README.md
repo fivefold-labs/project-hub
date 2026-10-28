@@ -43,6 +43,13 @@ Her öneri ayrı branch ve PR üzerinden, başka bir ekip üyesinin incelemesiyl
 
 Bir fikrin belgelenmesi, projenin seçildiği anlamına gelmez. Ürün kararı araştırma, ekip değerlendirmesi ve karar kaydıyla verilir.
 
+## Değerlendirmeye sunulan iki uygulama fikri
+
+- **[Ekran Görüntüsünden Aksiyon](docs/proje-fikirleri/gonderimler/suleymanssardogan-ekran-goruntusunden-aksiyon.md):** Telefonda kaydettiğimiz ekran görüntülerini aranabilir kayıtlara ve hatırlatıcılara dönüştüren mobil uygulama.
+- **[İş / Staj Başvuru Takipçisi](docs/proje-fikirleri/gonderimler/suleymanssardogan-is-staj-basvuru-takipcisi.md):** Başvuruları, görüşmeleri ve sonraki adımları tek yerde takip etmeyi sağlayan mobil uygulama.
+
+İki belgede projenin amacı, hedef kullanıcıları, örnek kullanımı ve ilk sürüm kapsamı anlatılıyor. Bunlar Süleyman'ın önerileri; proje henüz seçilmedi. Diğer öneriler ve ekip yorumları [issue #2'de](https://github.com/fivefold-labs/project-hub/issues/2).
+
 ## Geliştirme yaklaşımımız: SDLC + SSDLC
 
 Planlama → gereksinim analizi → tasarım → geliştirme → test → yayın → bakım ve geri bildirim. Bu aşamalar kısa iterasyonlarla tekrar edilir; proje seçilmeden teknoloji yığını sabitlenmez.
